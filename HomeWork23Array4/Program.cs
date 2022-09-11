@@ -31,7 +31,7 @@
             {
                 isWorking = false;
             }
-            else if (userInput.ToLower() != Sum.ToLower() && userInput.ToLower() != Exit.ToLower())
+            else
             {
                 number = Convert.ToInt32(userInput);
 
