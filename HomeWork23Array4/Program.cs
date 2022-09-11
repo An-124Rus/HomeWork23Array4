@@ -5,11 +5,10 @@
         const string Sum = "Sum";
         const string Exit = "Exit";
 
-        int number = 0;
+        int value = 0;
         bool isWorking = true;
-        int finalSum = 0;
 
-        int[] array = new int[number];
+        int[] array = new int[value];
 
         while (isWorking)
         {
@@ -18,14 +17,14 @@
 
             if (userInput.ToLower() == Sum.ToLower())
             {
+                int finalSum = 0;
+
                 for (int i = 0; i < array.Length; i++)
                 {
                     finalSum += array[i];
                 }
 
                 Console.Write($"\nСумма равна - {finalSum}\n\n");
-
-                finalSum = 0;
             }
             else if (userInput.ToLower() == Exit.ToLower())
             {
@@ -33,7 +32,7 @@
             }
             else
             {
-                number = Convert.ToInt32(userInput);
+                int number = Convert.ToInt32(userInput);
 
                 int[] tempArray = new int[array.Length + 1];
 
